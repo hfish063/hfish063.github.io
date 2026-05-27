@@ -243,42 +243,36 @@ section h2::after {
 }
 
 .travel-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .travel-photo {
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.travel-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
   transition: border-color var(--transition), transform var(--transition);
 }
 
-.travel-photo:hover {
+.travel-photo:hover img {
   border-color: var(--accent);
   transform: translateY(-2px);
 }
 
-.travel-photo img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-}
-
 .travel-photo figcaption {
-  padding: 0.5rem 0.75rem;
-  background: var(--bg-card);
   color: var(--text-muted);
   font-size: 0.82rem;
   text-align: center;
-}
-
-@media (max-width: 600px) {
-  .travel-gallery {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ── Timeline (Experience) ── */
