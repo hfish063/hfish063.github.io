@@ -100,12 +100,35 @@ nav ul a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 4rem 1.5rem;
 }
 
 .hero-content {
-  max-width: 640px;
+  max-width: 720px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-avatar-wrap {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+}
+
+.hero-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  text-align: left;
 }
 
 #hero h1 {
@@ -131,14 +154,12 @@ nav ul a:hover {
   font-size: 1.05rem;
   margin-bottom: 2rem;
   max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hero-links {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -489,5 +510,18 @@ footer {
 
   .timeline {
     padding-left: 1.25rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-links {
+    justify-content: center;
   }
 }
