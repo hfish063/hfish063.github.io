@@ -111,20 +111,15 @@ nav ul a:hover {
   gap: 3rem;
 }
 
-.hero-avatar-wrap {
+.hero-avatar {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  overflow: hidden;
+  background-image: url('images/tokyo.JPG');
+  background-size: cover;
+  background-position: center;
   border: 2px solid var(--border);
   flex-shrink: 0;
-}
-
-.hero-avatar {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .hero-text {
