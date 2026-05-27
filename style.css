@@ -234,6 +234,53 @@ section h2::after {
   font-weight: 500;
 }
 
+/* ── Travel ── */
+.travel-intro {
+  color: var(--text-muted);
+  max-width: 680px;
+  margin-bottom: 2rem;
+  font-size: 1.02rem;
+}
+
+.travel-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.travel-photo {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.travel-photo:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.travel-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.travel-photo figcaption {
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .travel-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Timeline (Experience) ── */
 .timeline {
   position: relative;
